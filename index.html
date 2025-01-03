@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上測驗系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 封面頁面 -->
+    <div id="welcome-page" class="container">
+        <div class="welcome-content">
+            <h1>📚 歡迎參加測驗</h1>
+            <p class="welcome-text">準備好了嗎？讓我們開始吧！</p>
+            <button id="start-btn" class="start-button">開始測驗</button>
+        </div>
+    </div>
+
+    <!-- 測驗頁面 -->
+    <div id="quiz-page" class="container hidden">
+        <header>
+            <h1>📝 線上測驗</h1>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </header>
+        
+        <main>
+            <div id="quiz-container">
+                <div class="quiz-section">
+                    <div id="current-question"></div>
+                    <div class="button-group">
+                        <button id="prev-btn" class="nav-btn" disabled>上一題</button>
+                        <button id="next-btn" class="nav-btn">下一題</button>
+                        <button id="submit-btn" class="hidden">提交答案</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result" class="hidden">
+                <h2>測驗結果</h2>
+                <div class="score-container">
+                    <div class="score-circle">
+                        <span id="score"></span>
+                        <span class="score-label">分</span>
+                    </div>
+                </div>
+                <p id="feedback"></p>
+                <button onclick="location.reload()">重新測驗</button>
+            </div>
+        </main>
+    </div>
+  <script src="questionData.js"></script>
+  <script src="script.js"></script>  
+</body>
+</html>
